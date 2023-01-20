@@ -68,12 +68,13 @@ function encriptarMensaje() {
             .replace(/u/gm, "ufat");
         textSalida.value = nuevoTexto;
         contSalidaSecundario.classList.add('active');
-        contSalidaInicial.classList.remove('active')
+        contSalidaInicial.classList.remove('active');
+        modificarTexarea()
     }
 }
 function desencriptarMensaje() {
     if(esCampoVacio() || !hayLetras() || verificarCaracteres() || verificarMayusculas()) {
-        mensajeError();
+        mensajeAlerta("error");
     } else {
         let nuevoTexto = textIngreso.value;
         nuevoTexto = nuevoTexto
@@ -83,9 +84,11 @@ function desencriptarMensaje() {
             .replace(/ober/gm, "o")
             .replace(/ufat/gm, "u");
         textSalida.value = nuevoTexto;
+        contSalidaSecundario.classList.add('active');
+        contSalidaInicial.classList.remove('active');
+        modificarTexarea()
     }
 }
-
 function mensajeAlerta(tipo) {
     if(tipo === "error") {
         swal({
@@ -93,6 +96,7 @@ function mensajeAlerta(tipo) {
             text: "No es posible hacer la traduccion, por favor intente modificando el texto",
             icon: "error",
             button: "ok",
+            timer: 1500,
         });
     } else if(tipo === "copia") {
         swal({
@@ -100,14 +104,28 @@ function mensajeAlerta(tipo) {
             text: "El mensaje asdo copiado correctamente",
             icon: "success",
             button: "hecho",
+            timer: 1500,
         });
     }
 }
-function copiarTxtSalida() {
-    let messageCopy = textSalida.value;
+function cpTxtSalida() {
+    navigator.clipboard.writeText(textSalida.value);
+    textSalida.value = "";
+    contSalidaSecundario.classList.remove('active');
+    contSalidaInicial.classList.add('active');
+    mensajeAlerta("copia");
 }
+function modificarTexarea() {
+    let texto = textSalida.value;
 
-
+    if(screen.width < 1050 && texto.length > 35) {
+        textSalida.style.height = "150px";
+    } else if (screen.width < 1050 && texto.length > 35) {
+        textSalida.style.height = "200px";
+    } else if (screen.width < 1050 && texto.length > 45) {
+        textSalida.style.height = "250px";
+    }
+}
 
 btnEncriptar.addEventListener("click", (e) => {
     e.preventDefault();
@@ -117,4 +135,9 @@ btnEncriptar.addEventListener("click", (e) => {
 btnDesencriptar.addEventListener("click", (e) => {
     e.preventDefault();
     desencriptarMensaje();
+});
+
+btnCopiar.addEventListener("click", (e) => {
+    e.preventDefault();
+    cpTxtSalida()
 });
