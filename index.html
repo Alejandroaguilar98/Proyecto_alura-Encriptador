@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="contenedor">
+        <div class="header">
+            <img src="Vector.png">
+        </div>
+        <div class="contenedor__ingreso">
+            <form class="formulario">
+                <div class="input__texto">
+                    <textarea class="contenedor__teaxtarea-ingreso" id="contenedor__teaxtarea-ingreso" placeholder="Ingrese texto aqui"></textarea>
+                </div>
+                <div class="mensaje__advertencia">
+                    <img src=""><p>Solo letras minusculas y sin acentos</p>
+                </div>
+                <div class="input__submit">
+                    <input type="submit" class="boton__encriptar" id="boton__encriptar" value="Encriptar">
+                    <input type="submit" class="boton__desencriptar" id="boton__desencriptar" value="Desencriptar">
+                </div>
+            </form>
+        </div>
+        <div class="contenedor__salida">
+            <div class="rectangle">
+                    <div class="mensaje__salida-inicial active" id="mensaje__salida-inicial">
+                        <img src="Muñeco.png">
+                        <h2 class="mensaje__titulo">Ningun mensaje fue encontrado</h2>
+                        <p class="mensaje__parrafo">Ingresa el texto que deces encriptar o desencriptar</p>
+                    </div>
+                    <div class="mensaje__salida-secundario" id="mensaje__salida-secundario">
+                        <div class="contenedor__teaxtarea-salida" id="contenedor__teaxtarea-salida">
+                            <textarea class="texto__salida" id="texto__salida"></textarea>
+                        </div>
+                        <div class="input__copiar">
+                            <input type="submit" class="copiar__textarea" value="copiar">
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="main.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+</html>
