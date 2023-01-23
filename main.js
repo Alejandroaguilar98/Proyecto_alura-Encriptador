@@ -116,14 +116,18 @@ function cpTxtSalida() {
     mensajeAlerta("copia");
 }
 function modificarTexarea() {
-    let texto = textSalida.value;
+    let texto = textIngreso.value;
 
-    if(screen.width < 1050 && texto.length > 35) {
-        textSalida.style.height = "150px";
-    } else if (screen.width < 1050 && texto.length > 35) {
-        textSalida.style.height = "200px";
-    } else if (screen.width < 1050 && texto.length > 45) {
+    if(screen.width < 700 && texto.length > 55) {
         textSalida.style.height = "250px";
+    } else if (screen.width < 700 && texto.length > 45) {
+        textSalida.style.height = "200px";
+    } else if (screen.width < 700 && texto.length > 35) {
+        textSalida.style.height = "150px";
+    } else if (screen.width < 1050 && texto.length > 130) {
+        textSalida.style.height = "200px";
+    } else if (screen.width < 1050 && texto.length > 100) {
+        textSalida.style.height = "150px";
     }
 }
 

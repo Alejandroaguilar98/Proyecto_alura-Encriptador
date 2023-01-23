@@ -7,6 +7,8 @@
     background: #F3F5FC;
     min-width: 375px;
     min-height: auto;
+    margin: 3vw;
+    border-radius: 24px;
 }
 
 /* !!!!  HEADER  ¡¡¡¡ */
@@ -114,12 +116,20 @@
     border-radius: 24px;
     color: white;
 }
+
 .boton__desencriptar {
     width: 340px;
     height: 68px;
     background: #D8DFE8;
     border: 1px solid #0A3871;
     border-radius: 24px;
+}
+
+input:hover { 
+    cursor:pointer;
+    color: rgba(255, 255, 255, 1) !important;
+    box-shadow: 0 4px 16px rgba(49, 138, 172, 1);
+    transition: all 0.2s ease;
 }
 
 /* !!!!  CONTENEDOR SALIDA ¡¡¡¡ */
@@ -186,8 +196,9 @@
     width: 100%;
     height: auto;
 }
-.contenedor__textarea-dalida {
+.contenedor__teaxtarea-salida {
     height: auto;
+    width: 90%;
 }
 .texto__salida {
     height: 120px;
@@ -224,9 +235,45 @@
     opacity: 1;
 }
 
+.footer {
+    height: 180px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer__conteiner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.footer__sociales {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    height: 100px;
+    width: 200px;
+    list-style-type: none;
+}
+
+.footer__titulo, .footer__mensaje {
+    color: #F3F5FC;
+    text-align: center;
+}
+
+.footer__enlase {
+    padding: 10px;
+}
+
 
 /* !!!!  MEDIA QUERYS ¡¡¡¡ */
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 765px) {
     .input__texto {
         min-height: 550px;
     }
@@ -244,7 +291,6 @@
 @media screen and (min-width: 1050px) {
     .contenedor {
         height: 1024px;
-        margin: 10px;
         padding: 20px;
         flex-direction: row;
     }
