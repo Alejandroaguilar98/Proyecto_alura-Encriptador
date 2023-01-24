@@ -1,14 +1,12 @@
 #  Encriptador de texto
 
 ## Descripcion
----
 
 En este primer desafio se nos pidio que creemos una pagina web estatica que encripte y desencripte el texto ingresado por el usuario, presentando el resultado en forma encriptada y desencriptada.
 
 
 
 ## Laves de encriptacion
----
 Las llaves de encriptacion que se dio fueron las siguientes:
 * La letra "e" es convertida en "enter"
 * La letra "i" es convertida en "imes"
@@ -17,7 +15,6 @@ Las llaves de encriptacion que se dio fueron las siguientes:
 * La letra "u" es convertida en "ufat"
 
 ## Requisitos
----
 1. No debe funcionar con letras minúsculas.
 2. No deben ser utilizados letras con acentos ni caracteres especiales.
 3. Debe ser posible convertir una palabra a la versión encriptada como también devolver una palabra para su versión original.
@@ -31,19 +28,27 @@ por ejemplo:
 4. Debe tener un boton que premita compiar el texto resultante directamente.
 
 ## Mensaje secreto
----
 Por ultimo se nos ha entregado este mensaje secreto que podria ser desifrado utilisando el desencriptador de la pagina una vez resuelto el challenge:
 
 <p>
 
     fenterlimescimesdaidenters poberr enternfrenterntair enterstenter dentersaifimesober y haibenterrlober cobernclufatimesdober cobern enterximestober
+    
 </p>
 
 ## Resultado final
----
-
+### Desctop 
+![imagen desctop](sussets/img/Captura.PNG)
+### Tablet
+![imagen tablet](sussets/img/Captura2.PNG)
+### Celular 
+![imagen celular](sussets/img/Captura3.PNG)
 
 
 **puedes ver el resultado final accediendo** 
 [aqui](https://alejandroaguilar98.github.io/Proyecto_alura-Encriptador/
 ) !!
+
+## Herramientas utilizadas en el challenge
+1. Figma - Para la visualizacion de las plantillas
+2. Trello - Para administrar el proyecto.
